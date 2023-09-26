@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.logo-info i{
+    padding-left: 20px;
+    padding-right: 5px;
+    font-size: 20px;
+    color: black;
+    
+}
+
+.logo-info{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-izquierdo{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.logo-izquierdo select{
+    border: none;
+    font-size: 15px;
+
+    
+}
+.logo-derecho{
+    background-color:white;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+.menu ul{
+    display: flex;
+    font-family:  'Times' , serif;
+}
+.menu li{
+    display: flex;
+    padding: 5px 15px 5px 35px ;
+    font-size: 25px;
+    font-weight:bolder
+    
+}
+.menu a{
+    color: black;
+}
+
+
+.carrusel{
+    display: flex;
+    width: 1100px;
+    height: 460px;
+    justify-content: center;
+}
+.carrusel img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+.carrusel img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+ .inicio-img{
+    margin-top: 15px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.inicio-img p{
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
+}
+.inicio-img .pp1{
+    font-size: 2rem;
+    font-style: oblique;
+    color: rgb(189, 225, 59);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
+}
+/* contenido */
+.women-men{
+    display: flex;
+    justify-content: center;
+
+}
+.women-men img{
+    width: 510px;
+    height: 580px;
+    margin: 15px;
+    
+}
+
+.contenido{
+    border: 12px solid #e5e5e5;
+    background-color: #fff;
+    z-index: 1;
+    position: absolute;
+    width: 300px;
+    padding: 2rem;
+    
+}
+.contenido h1{
+    font-size: 45px;
+}
+.contenido h3{
+    font-size: 30px;
+}
+.contenido h1, h3 , span {
+    display: flex;
+    justify-content: center;
+    padding: 5px 25px;
+}
+.contenido-info{
+    padding: 0 100px;
+}
+
+.contenido span{
+    font-size: 20px;
+    line-height: 16px;
+    
+    
+}
+
+
+.women img{
+    position: relative;
+
+}
+.women .contenido{
+    position: relative;
+    top: -20%;
+    right: -15%;
+    z-index: 1;
+}
+.men img{
+    top: 15%;
+    position: relative;
+
+}
+.men .contenido{
+    position: relative;
+    top: -63%;
+    left: 15%;
+    z-index: 1;
+}
+
+.women-men img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    filter: opacity(50%);
+}
+.women img:hover + .contenido{
+    transform: translateY(-15px); 
+    transition: transform 0.5s;
+    box-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
+}
+.men img:hover + .contenido{
+    transform: translateY(15px); 
+    transition: transform 0.5s;
+    box-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
+}
+
+
+/*asasasa*/
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    background-color: #333; 
+    color: rgb(221, 217, 217);
+    padding: 20px 60px; 
+    margin-left: -150px;
+    margin-right: -150px;
+
+    
+}
+
+
+.footer-logo{
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.footer-logo2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer .footer-logo3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+ .footer-logo4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer ul, li{
+    padding: 10px 0px;
+    list-style: none;
+    font-size: 15px;
+}
+
+footer p{
+    font-size: 20px;
+    color: white;
+}
+
+footer a{
+    text-decoration: none;
+    color: #dbc9c9;
+}
+
+
+
