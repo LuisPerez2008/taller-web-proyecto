@@ -1,3 +1,4 @@
+/*CSS MENU*/
 *{
     margin: 0;
 
@@ -56,13 +57,17 @@ body{
     display: flex;
     padding: 5px 15px 5px 35px ;
     font-size: 25px;
-    font-weight:bolder
+    font-weight:bolder;
+    
+    
     
 }
 .menu a{
     color: black;
+    text-decoration: none;
 }
 
+/*CSS CARRUSEL*/
 
 .carrusel{
     display: flex;
@@ -111,10 +116,11 @@ body{
     transform: translate(-50%, -50%);
     text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
 }
-/* contenido */
+/* CSS contenido */
 .women-men{
     display: flex;
     justify-content: center;
+    height: 850px;
 
 }
 .women-men img{
@@ -135,6 +141,7 @@ body{
 }
 .contenido h1{
     font-size: 45px;
+    text-align: center;
 }
 .contenido h3{
     font-size: 30px;
@@ -143,6 +150,7 @@ body{
     display: flex;
     justify-content: center;
     padding: 5px 25px;
+    text-align: center;
 }
 .contenido-info{
     padding: 0 100px;
@@ -154,8 +162,6 @@ body{
     
     
 }
-
-
 .women img{
     position: relative;
 
@@ -195,8 +201,90 @@ body{
 }
 
 
-/*asasasa*/
+/*CSS PARA TESTIMONIO*/
+ .test{
+    background-image: url(../img/testimonios/banners-sneakers.webp);
+    background-size: cover;
+    height: 375px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+ }
+.testimonios{
+    
+    height: 350px;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+}
+
+
+.testimonio-1{   
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.items-testimonio{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+.testimonio-1 img{
+    border: 2px solid rgb(239, 236, 236);
+    padding: 1px;
+    border-width: 5px;
+    height: 100px;
+    width: 100px;
+    
+}
+.items-testimonio  p ,h3, h5{
+    text-align: center;
+    margin: 0;
+    color: rgb(211, 181, 181);
+    text-shadow: 0 0 10px rgb(0, 0, 0, 0.8);
+    
+}
+.buttons-testimonio{
+    height: 4%;
+    position: absolute;
+    width: 8%;
+    display: flex;
+    justify-items: center;
+    top: 94%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    
+}
+.buttons-testimonio i {
+    margin: 0px 10px;   
+    width: 1px;
+    color: white;
+}
+.buttons-testimonio a {
+    text-decoration: none;    
+}
+
+.buttons-testimonio i:hover{
+    color: orange;
+ 
+}
+
+
+
+/*CSS PARA FOOTER*/
 footer {
+    height: 230px;
     display: grid;
     grid-template-columns: repeat(4, 1fr) ;
     background-color: #333; 
@@ -207,7 +295,6 @@ footer {
 
     
 }
-
 
 .footer-logo{
     justify-content: center;
