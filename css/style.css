@@ -1,27 +1,37 @@
 /*CSS MENU*/
 *{
     margin: 0;
-
+    display: flexbox;
+    scroll-behavior: smooth;
+    
+      
 }
 body{
+    
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 150px;
-    margin-right: 150px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    
+    
 }
 
 .logo-info i{
     padding-left: 20px;
-    padding-right: 5px;
+    padding-right: 15px;
     font-size: 20px;
     color: black;
     
 }
-
 .logo-info{
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    
+    
 }
 
 .logo-izquierdo{
@@ -34,15 +44,20 @@ body{
 .logo-izquierdo select{
     border: none;
     font-size: 15px;
-
     
+}
+
+.logo-centro{
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    margin-right: 12%;
 }
 .logo-derecho{
     background-color:white;
-    padding-left: 15px;
     display: flex;
     align-items: center;
-    
+    justify-content: end;
 }
 
 .menu {
@@ -121,7 +136,8 @@ body{
     display: flex;
     justify-content: center;
     height: 850px;
-
+    
+    
 }
 .women-men img{
     width: 510px;
@@ -129,6 +145,7 @@ body{
     margin: 15px;
     
 }
+
 
 .contenido{
     border: 12px solid #e5e5e5;
@@ -275,10 +292,6 @@ body{
     text-decoration: none;    
 }
 
-.buttons-testimonio i:hover{
-    color: orange;
- 
-}
 
 
 
@@ -290,17 +303,25 @@ footer {
     background-color: #333; 
     color: rgb(221, 217, 217);
     padding: 20px 60px; 
-    margin-left: -150px;
+    margin-left: -152px;
     margin-right: -150px;
 
     
 }
 
 .footer-logo{
-    justify-content: center;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px;
+    align-items: center;
+    text-align: justify;
+   
 
 }
+.footer-logo span{
+    text-align: justify;
+}
+
 
 .footer-logo2 {
     display: flex;
@@ -337,6 +358,8 @@ footer a{
     text-decoration: none;
     color: #dbc9c9;
 }
+
+
 
 
 
