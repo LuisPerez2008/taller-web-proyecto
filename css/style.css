@@ -16,6 +16,15 @@ body{
     
     
 }
+select {
+    border: none; 
+    background: transparent; 
+}
+
+select:focus {
+    outline: none; 
+    box-shadow: none; 
+}
 
 .logo-info i{
     padding-left: 20px;
@@ -49,7 +58,6 @@ body{
 
 .logo-centro{
     display: flex;
-    background-color: black;
     justify-content: center;
     margin-right: 12%;
 }
@@ -359,7 +367,5 @@ footer a{
     color: #dbc9c9;
 }
 
-
-
-
+/*CSS PARA CATEGORIA */
 
