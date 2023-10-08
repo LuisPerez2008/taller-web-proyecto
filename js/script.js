@@ -1,4 +1,4 @@
-
+console.log("hola mundo");
 var select = document.getElementById("elegir-cate");
 
 // Evento change para redireccionar y seleccionar la opción adecuada
@@ -25,3 +25,9 @@ if (currentPage.endsWith("hombre.html")) {
 } else if (currentPage.endsWith("categoria.html")){
     select.value = "todos";
 }
+
+window.addEventListener('scroll', function () {
+    const izquierda = document.querySelector('.blog-izquierda');
+    izquierda.style.transform = `translateY(${window.scrollY}px)`;
+  });
+  

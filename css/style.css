@@ -139,6 +139,7 @@ select:focus {
     transform: translate(-50%, -50%);
     text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
 }
+
 /* CSS contenido */
 .women-men{
     display: flex;
@@ -154,14 +155,15 @@ select:focus {
     
 }
 
-
 .contenido{
+    background-color: red;
     border: 12px solid #e5e5e5;
     background-color: #fff;
     z-index: 1;
     position: absolute;
     width: 300px;
     padding: 2rem;
+    
     
 }
 .contenido h1{
@@ -179,12 +181,29 @@ select:focus {
 }
 .contenido-info{
     padding: 0 100px;
+    
 }
-
+.boton{
+    display: flex;
+    justify-content: center;
+    padding: 15px 5px;
+    
+}
+.boton button{
+    background-color: black;
+    padding: 5px 15px;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+}
+.boton button:hover{
+    background-color: orange;
+    color: black;
+}    
 .contenido span{
     font-size: 20px;
     line-height: 16px;
-    
     
 }
 .women img{
@@ -208,6 +227,7 @@ select:focus {
     left: 15%;
     z-index: 1;
 }
+
 
 .women-men img:hover{
     cursor: pointer;
