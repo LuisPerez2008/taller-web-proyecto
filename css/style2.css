@@ -2,6 +2,8 @@
     margin-left: -152px;
     margin-right: -152px;
     background-image: url(../img/baner/parallax.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: cover;
     height: 170px;
     display: flex;
@@ -44,8 +46,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    position: relative;
-    
+    position: relative;   
 }
 
 .product-card img {
@@ -101,6 +102,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0; /* Agregué esta línea para iniciar invisible */
+    transition: opacity 0.5s; /* Agregué una transición de opacidad */
+    
 }
 
 .info-card h2,
@@ -114,4 +118,6 @@
 /* Mostrar .info-card al pasar el mouse sobre .product-card */
 .product-card:hover .info-card {
     display: flex;
+    opacity: 1;
 }
+

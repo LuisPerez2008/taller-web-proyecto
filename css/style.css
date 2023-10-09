@@ -3,7 +3,6 @@
     margin: 0;
     display: flexbox;
     scroll-behavior: smooth;
-    
       
 }
 body{
@@ -139,6 +138,7 @@ select:focus {
     transform: translate(-50%, -50%);
     text-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
 }
+
 /* CSS contenido */
 .women-men{
     display: flex;
@@ -149,19 +149,20 @@ select:focus {
 }
 .women-men img{
     width: 510px;
-    height: 580px;
+    height: auto;
     margin: 15px;
     
 }
 
-
 .contenido{
+    background-color: red;
     border: 12px solid #e5e5e5;
     background-color: #fff;
     z-index: 1;
     position: absolute;
     width: 300px;
     padding: 2rem;
+    
     
 }
 .contenido h1{
@@ -179,12 +180,29 @@ select:focus {
 }
 .contenido-info{
     padding: 0 100px;
+    
 }
-
+.boton{
+    display: flex;
+    justify-content: center;
+    padding: 15px 5px;
+    
+}
+.boton button{
+    background-color: black;
+    padding: 5px 15px;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+}
+.boton button:hover{
+    background-color: orange;
+    color: black;
+}    
 .contenido span{
     font-size: 20px;
     line-height: 16px;
-    
     
 }
 .women img{
@@ -209,6 +227,7 @@ select:focus {
     z-index: 1;
 }
 
+
 .women-men img:hover{
     cursor: pointer;
     opacity: 0.8;
@@ -230,7 +249,7 @@ select:focus {
  .test{
     background-image: url(../img/testimonios/banners-sneakers.webp);
     background-size: cover;
-    height: 375px;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -272,7 +291,7 @@ select:focus {
     width: 100px;
     
 }
-.items-testimonio  p ,h3, h5{
+#items-testimonio p ,h3,h5{
     text-align: center;
     margin: 0;
     color: rgb(211, 181, 181);
@@ -305,7 +324,7 @@ select:focus {
 
 /*CSS PARA FOOTER*/
 footer {
-    height: 230px;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr) ;
     background-color: #333; 
