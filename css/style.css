@@ -3,7 +3,6 @@
     margin: 0;
     display: flexbox;
     scroll-behavior: smooth;
-    
       
 }
 body{
@@ -150,7 +149,7 @@ select:focus {
 }
 .women-men img{
     width: 510px;
-    height: 580px;
+    height: auto;
     margin: 15px;
     
 }
@@ -250,7 +249,7 @@ select:focus {
  .test{
     background-image: url(../img/testimonios/banners-sneakers.webp);
     background-size: cover;
-    height: 375px;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -292,7 +291,7 @@ select:focus {
     width: 100px;
     
 }
-.items-testimonio  p ,h3, h5{
+#items-testimonio p ,h3,h5{
     text-align: center;
     margin: 0;
     color: rgb(211, 181, 181);
@@ -325,7 +324,7 @@ select:focus {
 
 /*CSS PARA FOOTER*/
 footer {
-    height: 230px;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr) ;
     background-color: #333; 

@@ -26,8 +26,5 @@ if (currentPage.endsWith("hombre.html")) {
     select.value = "todos";
 }
 
-window.addEventListener('scroll', function () {
-    const izquierda = document.querySelector('.blog-izquierda');
-    izquierda.style.transform = `translateY(${window.scrollY}px)`;
-  });
+
   

@@ -2,6 +2,8 @@
     margin-left: -152px;
     margin-right: -152px;
     background-image: url(../img/baner/parallax.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: cover;
     height: 170px;
     display: flex;

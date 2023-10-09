@@ -30,8 +30,8 @@
                 <a href="index.html"><img src="img/logo/iconno.ico" alt=""></a>
             </div>
             <div class="logo-derecho">
-                <a href=""><i class="bi bi-person-fill"></i></a>
-                <a href=""><i class="bi bi-cart-fill"></i></a>
+                <a href="loginVans.html"><i class="bi bi-person-fill"></i></a>
+                <a href="carrito.html"><i class="bi bi-cart-fill"></i></a>
             </div>
         </nav>
         <hr> 
@@ -71,6 +71,7 @@
                         
                     </div>
                 </div>
+                
             <div class="blog-derecha">
                 <div class="infos">
                     <img src="./img/baner/Blog_Vans1.webp" alt="imagen-blog"><br><br>
@@ -121,15 +122,15 @@
                         <img src="./img/baner/user.jpg" alt="">
                         <div class="info-comentario">
                             <h4>administrador</h4>
-                            <p>16 Septiembre 2023 a las 6:00 pm</p>
-                            <p>Exlente publicaión</p>
+                            <p>9/10/2023, 00:07:36</p>
+                            <p>Exlente publicación</p>
                         </div>
                     </div> <br>
                     <div class="comentario" id="comentario2">
                         <img src="./img/baner/user.jpg" alt="">
                         <div class="info-comentario">
                             <h4>Luis Perez</h4>
-                            <p>16 Septiembre 2023 a las 6:00 pm</p>
+                            <p>9/10/2023, 00:07:36</p>
                             <p>Este blog de ropa es una verdadera joya. Cada artículo es una fuente inagotable de inspiración para mis
                                 looks diarios. Las recomendaciones de tendencias siempre son acertadas, y las sugerencias de combinaciones
                                 de prendas me han ayudado a descubrir mi propio estilo. ¡No puedo esperar para ver más publicaciones 
@@ -141,7 +142,7 @@
                         <img src="./img/baner/user.jpg" alt="">
                         <div class="info-comentario">
                             <h4>administrador</h4>
-                            <p>16 Septiembre 2023 a las 6:00 pm</p>
+                            <p>9/10/2023, 00:07:36</p>
                             <p>¡Este blog es simplemente increíble! Siempre he sido un apasionado de la moda, y encontrar un lugar 
                                 donde puedo obtener consejos útiles y estar al tanto de las últimas tendencias es un verdadero tesoro. 
                                 Los artículos son informativos y bien escritos, y las imágenes de las prendas son realmente inspiradoras.
@@ -152,6 +153,8 @@
                             </p>
                         </div>
                     </div>
+
+                    <div id="comentarios-container"></div>
                 </div> <br><br>
                 <div class="form-comentario">
                     <h2>Dejar un comentario</h2>
@@ -161,10 +164,10 @@
                             <label for="">Nombre* &emsp; </label>
                             <input type="text" id="name" name="name" required minlength="4" maxlength="12" >&emsp;
                             <label for="">E-mail* &emsp; </label> 
-                            <input type="email" id="email" pattern=".+@globex\.com" size="30" placeholder="e-mail@gmail.com"> <br> <br>
+                            <input type="email" id="email"  size="30" placeholder="e-mail@gmail.com"> <br> <br>
                             <label for="">Comentario</textarea></label><br>
-                            <textarea name="comentario" id="" cols="30" rows="10"></textarea><br><br>
-                            <button type="submit"> Enviar Comentario</button>
+                            <textarea name="comentario" id="comen" cols="30" rows="10"></textarea><br><br>
+                            <button type="submit"> Enviar Mensaje</button>
                         </form>
                     </div>
 
@@ -181,11 +184,12 @@
     <br><br>
     <footer>
         <nav class="footer-logo">
-            <img src="img/logo/iconno.ico" alt="logo-imagen">
+            <img src="./img/logo/iconno.ico" alt="logo-imagen">
             
-             <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti saepe accusamus dolorum blanditiis
-                 voluptatem. Ducimus, voluptates eos quia  
-                </span>
+             <span>En VANS, creemos que el estilo urbano es una forma de expresión. 
+                Las zapatillas Vans son una parte integral de ese estilo, y estamos emocionados de ser tu destino de elección para 
+                encontrar las últimas tendencias y clásicos eternos  
+            </span>
 
         </nav>
         <nav class="footer-logo2">
@@ -212,13 +216,55 @@
         <nav class="footer-logo4">
             <ul>
                 <p>Información de la tienda</p>
-                <a href=""><li><i class="bi bi-geo-alt-fill"></i>Jockey Plaza, Av. Javier Prado Este 4200, Santiago de Surco 15023</li></a>
-                <a href=""><li><i class="bi bi-telephone-fill"></i> 2926565</li></a>
-                <a href=""><li><i class="bi bi-envelope-at-fill"></i> emailvans@store.com</li></a>
+                <a href="contacto.html"><li><i class="bi bi-geo-alt-fill"></i>Jockey Plaza, Av. Javier Prado Este 4200, Santiago de Surco 15023</li></a>
+                <a href="contacto.html"><li><i class="bi bi-telephone-fill"></i> 2926565</li></a>
+                <a href="contacto.html"><li><i class="bi bi-envelope-at-fill"></i> emailvans@store.com</li></a>
             </ul>
 
         </nav>
 
     </footer>
+
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+    // Tu código JavaScript aquí
+    const formulario = document.querySelector(".form-comentario form");
+    const comentariosContainer = document.querySelector(".comentarios");
+    const comentariosList = comentariosContainer.querySelector("#comentarios-container");
+    const nombreInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const comentarioTextarea = document.getElementById("comen");
+
+    formulario.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Obtén los valores del formulario
+        const nombre = nombreInput.value;
+        const email = emailInput.value;
+        const comentarioTexto = comentarioTextarea.value;
+
+        // Crea un nuevo div de comentario
+        const nuevoComentario = document.createElement("div");
+        nuevoComentario.className = "comentario";
+        nuevoComentario.innerHTML = `
+            <img src="./img/baner/user.jpg" alt="">
+            <div class="info-comentario">
+                <h4>${nombre}</h4>
+                <p>${new Date().toLocaleString()}</p>
+                <p>${comentarioTexto}</p>
+            </div>
+        `;
+
+        // Agrega el nuevo comentario a la lista de comentarios
+        comentariosList.appendChild(nuevoComentario);
+
+        // Limpia los campos del formulario
+        nombreInput.value = "";
+        emailInput.value = "";
+        comentarioTextarea.value = "";
+    });
+});
+    </script>
 </body>
+
 </html>

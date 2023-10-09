@@ -1,16 +1,18 @@
 
 .conteiner-blog{
-    
+    overflow: hidden;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: row;
     .blog-izquierda{
+        position: relative;
         width: 30%;
         height: auto;
         padding: 1rem;
         .recent-post{
             border: solid .1rem #ccc;
+            height: 99%;
             padding: 1rem;
             display: flex;
             flex-direction: row;
@@ -18,7 +20,7 @@
                 width: 50%;
                 height: 100%;
                 & img{
-                height: 100%;
+                height: auto;
                 width: 100%;}
                 & h2{
                     font-size: 20px;
@@ -36,10 +38,11 @@
         }
     }
     .blog-derecha{
-        position: sticky;
+       
         width: 70%;
         height: auto;
         .infos{
+            margin-top: 1rem;
             width: 100%;
             height: auto;
             & img{
@@ -126,5 +129,62 @@
 
             }
         }
+    }
+}
+/* Contacto CSS*/
+
+.conteiner-contac{
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+
+    .form-contac{
+        line-height: 1.2;
+        padding: 1rem;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        .cont{
+            width: 38rem;
+            margin-left: 10%;
+           
+        }
+        & input{
+            padding: 0.1rem 0.5rem;
+            background: #f5f5f5;
+            border-radius: 0.05rem;
+            border: none;
+            height: 30px;
+            outline: none; 
+            box-shadow: none;
+        }
+        & textarea{
+            background: #f5f5f5;
+            padding: 0.8rem 0.5rem;
+            border-radius: 0.05rem;
+            border: none;
+            width: 98%;
+            outline: none; 
+            box-shadow: none;
+        }
+        & button{
+            width: 25%;
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 2rem;
+            background-color: black;
+
+        }
+    }
+    .info-contac{
+        background-color: #f5f5f5;;
+        padding: 1rem;
+        margin-left: 1rem;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        
+
     }
 }
