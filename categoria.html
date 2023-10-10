@@ -6,7 +6,6 @@
     <meta name="lenguaje">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style2.css">
-    <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
     <script src="./js/script.js"></script>
@@ -31,9 +30,12 @@
                 <a href="index.html"><img src="img/logo/iconno.ico" alt=""></a>
             </div>
             <div class="logo-derecho">
-                <a href=""><i class="bi bi-person-fill"></i></a>
-                <a href=""><i class="bi bi-cart-fill"></i></a>
+                <a href="loginVans.html"><i class="bi bi-person-fill"></i></a>
+                <a href="carrito.html"><i class="bi bi-cart-fill"><span class="numeriro" id="numerito">0</span></i></a>
+                <button class="boton-circular" onclick="cambiarFondo()"></button>
+                <button class="boton-circular2" onclick="cambiarFondo2()"></button> 
             </div>
+            <div id="notificacion-container" class="notificacion-container"></div>
         </nav>
         <hr> 
         <nav class="menu">
@@ -62,84 +64,111 @@
         <p>En VANS, creemos que el estilo urbano es una forma de expresión. Las zapatillas Vans son una parte integral de ese estilo, y estamos emocionados de ser tu destino de elección para encontrar las últimas tendencias y clásicos eternos. Visítanos hoy mismo y sumérgete en el mundo de las zapatillas urbanas de Vans. Tu próxima aventura urbana comienza aquí..</p><br>
         <section class="main">
             <div class="product-card">
-                <img src="./img/zapatillas/01.jpg" alt="Nombre del Producto">
+                <img src="./img/zapatillas/vans-h/01.jpg" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Nombre del Producto</h2>
                     <p>Descripción breve del producto.</p>
                     <p class="price">$99.99</p>
-                    <button>Agregar al carrito</button>
+                    <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/zapatillas/01.jpg" alt="Nombre del Producto">
+                <img src="./img/zapatillas/vans-m/mujer01.png" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Nombre del Producto</h2>
                     <p>Descripción breve del producto.</p>
                     <p class="price">$99.99</p>
-                    <button>Agregar al carrito</button>
+                    <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/zapatillas/01.jpg" alt="Nombre del Producto">
+                <img src="./img/zapatillas/vans-h/02.jpg" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Nombre del Producto</h2>
                     <p>Descripción breve del producto.</p>
                     <p class="price">$99.99</p>
-                    <button>Agregar al carrito</button>
+                    <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/zapatillas/01.jpg" alt="Nombre del Producto">
+                <img src="./img/zapatillas/vans-m/mujer02.png" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Nombre del Producto</h2>
                     <p>Descripción breve del producto.</p>
                     <p class="price">$99.99</p>
-                    <button>Agregar al carrito</button>
+                    <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/zapatillas/01.jpg" alt="Nombre del Producto">
+                <img src="./img/zapatillas/vans-h/03.jpg" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Nombre del Producto</h2>
                     <p>Descripción breve del producto.</p>
                     <p class="price">$99.99</p>
-                    <button>Agregar al carrito</button>
+                    <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/zapatillas/01.jpg" alt="Nombre del Producto">
+                <img src="./img/zapatillas/vans-m/mujer03.png" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Nombre del Producto</h2>
                     <p>Descripción breve del producto.</p>
                     <p class="price">$99.99</p>
-                    <button>Agregar al carrito</button>
+                    <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/zapatillas/01.jpg" alt="Nombre del Producto">
+                <img src="./img/zapatillas/vans-h/04.jpg" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Nombre del Producto</h2>
                     <p>Descripción breve del producto.</p>
                     <p class="price">$99.99</p>
-                    <button>Agregar al carrito</button>
+                    <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/zapatillas/01.jpg" alt="Nombre del Producto">
+                <img src="./img/zapatillas/vans-m/mujer04.png" alt="Nombre del Producto">
                 <div class="info-card">
-                    <h2>Nombre del Producto</h2>
-                    <p>Descripción breve del producto.</p>
+                    <h2 class="nombre-producto">Nombre del Producto</h2>
+                    <p class="descripcion">Descripción breve del producto.</p>
                     <p class="price">$99.99</p>
-                    <button>Agregar al carrito</button>
+                    <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
             </div>
             <div class="product-card">
-                <img src="./img/zapatillas/01.jpg" alt="Nombre del Producto">
+                <img src="./img/zapatillas/vans-h/05.jpg" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Nombre del Producto</h2>
                     <p>Descripción breve del producto.</p>
                     <p class="price">$99.99</p>
-                    <button>Agregar al carrito</button>
+                    <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./img/zapatillas/vans-h/06.jpg" alt="Nombre del Producto">
+                <div class="info-card">
+                    <h2>Nombre del Producto</h2>
+                    <p>Descripción breve del producto.</p>
+                    <p class="price">$99.99</p>
+                    <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./img/zapatillas/vans-m/mujer05.png" alt="Nombre del Producto">
+                <div class="info-card">
+                    <h2>Nombre del Producto</h2>
+                    <p>Descripción breve del producto.</p>
+                    <p class="price">$99.99</p>
+                    <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./img/zapatillas/vans-h/07.jpg" alt="Nombre del Producto">
+                <div class="info-card">
+                    <h2>Nombre del Producto</h2>
+                    <p>Descripción breve del producto.</p>
+                    <p class="price">$99.99</p>
+                    <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
             </div>
             
@@ -191,6 +220,8 @@
         </nav>
 
     </footer>
-    <script src="./js/script.js"></script>
+    <script>
+        
+    </script>
 </body>
 </html>
