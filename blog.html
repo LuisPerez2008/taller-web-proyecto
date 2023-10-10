@@ -32,6 +32,8 @@
             <div class="logo-derecho">
                 <a href="loginVans.html"><i class="bi bi-person-fill"></i></a>
                 <a href="carrito.html"><i class="bi bi-cart-fill"></i></a>
+                <button class="boton-circular" onclick="cambiarFondo()"></button>
+                <button class="boton-circular2" onclick="cambiarFondo2()"></button> 
             </div>
         </nav>
         <hr> 
@@ -227,33 +229,33 @@
 
     <script>
        document.addEventListener("DOMContentLoaded", function() {
-    // Tu código JavaScript aquí
-    const formulario = document.querySelector(".form-comentario form");
-    const comentariosContainer = document.querySelector(".comentarios");
-    const comentariosList = comentariosContainer.querySelector("#comentarios-container");
-    const nombreInput = document.getElementById("name");
-    const emailInput = document.getElementById("email");
-    const comentarioTextarea = document.getElementById("comen");
+        // Tu código JavaScript aquí
+        const formulario = document.querySelector(".form-comentario form");
+        const comentariosContainer = document.querySelector(".comentarios");
+        const comentariosList = comentariosContainer.querySelector("#comentarios-container");
+        const nombreInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const comentarioTextarea = document.getElementById("comen");
 
-    formulario.addEventListener("submit", function(event) {
-        event.preventDefault();
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault();
 
-        // Obtén los valores del formulario
-        const nombre = nombreInput.value;
-        const email = emailInput.value;
-        const comentarioTexto = comentarioTextarea.value;
+            // Obtén los valores del formulario
+            const nombre = nombreInput.value;
+            const email = emailInput.value;
+            const comentarioTexto = comentarioTextarea.value;
 
-        // Crea un nuevo div de comentario
-        const nuevoComentario = document.createElement("div");
-        nuevoComentario.className = "comentario";
-        nuevoComentario.innerHTML = `
-            <img src="./img/baner/user.jpg" alt="">
-            <div class="info-comentario">
-                <h4>${nombre}</h4>
-                <p>${new Date().toLocaleString()}</p>
-                <p>${comentarioTexto}</p>
-            </div>
-        `;
+            // Crea un nuevo div de comentario
+            const nuevoComentario = document.createElement("div");
+            nuevoComentario.className = "comentario";
+            nuevoComentario.innerHTML = `
+                <img src="./img/baner/user.jpg" alt="">
+                <div class="info-comentario">
+                    <h4>${nombre}</h4>
+                    <p>${new Date().toLocaleString()}</p>
+                    <p>${comentarioTexto}</p>
+                </div>
+            `;
 
         // Agrega el nuevo comentario a la lista de comentarios
         comentariosList.appendChild(nuevoComentario);

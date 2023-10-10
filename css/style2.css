@@ -30,13 +30,15 @@
 .main {
     display: flex;
     flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en varias columnas */
-    justify-content: space-between; /* Espacio igual entre las columnas */
+    justify-content: space-between; 
+    height: auto;/* Espacio igual entre las columnas */
 }
 
 /* Estilos para la tarjeta de producto */
 .product-card {
     width: calc(25% -20px); /* Ancho de cada tarjeta (ajusta según sea necesario) */
     height: 340px;
+    max-width: 300px; 
     border: 1px solid #ccc;
     padding: 5px;
     margin-bottom: 20px;
@@ -44,14 +46,20 @@
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     position: relative;   
 }
 
 .product-card img {
+    transition: transform 0.3s ease-in-out;
     max-width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 340px;
+}
+.product-card:hover img {
+    transform: scale(0.9); 
+    
 }
 
 .info-card{
@@ -121,3 +129,20 @@
     opacity: 1;
 }
 
+
+.bi-cart-fill{
+    display: flex;
+    align-items: center;
+    & span{
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #ffcc01;
+        border: solid #ffcc01;
+        width: min-content;
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
+        margin: auto;
+        font-size: small;
+        padding: 0px 1px;
+    }
+}
