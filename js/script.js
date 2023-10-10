@@ -1,4 +1,4 @@
-console.log("hola mundo");
+
 var select = document.getElementById("elegir-cate");
 
 // Evento change para redireccionar y seleccionar la opción adecuada
@@ -81,7 +81,6 @@ function cambiarFondo2() { // Volver
     footer.style.color = "rgb(221, 217, 217)"; 
     
 }
-
 
 
 
