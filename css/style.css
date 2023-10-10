@@ -114,6 +114,7 @@ select:focus {
     filter: contrast(120%);
 }
  .inicio-img{
+    width: 100%;
     margin-top: 15px;
     display: flex;
     position: relative;
@@ -144,9 +145,11 @@ select:focus {
 
 /* CSS contenido */
 .women-men{
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     height: 850px;
+    width: 100%;
     
     
 }
@@ -158,7 +161,7 @@ select:focus {
 }
 
 .contenido{
-    background-color: red;
+
     border: 12px solid #e5e5e5;
     background-color: #fff;
     z-index: 1;
