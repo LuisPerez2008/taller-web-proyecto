@@ -297,7 +297,7 @@ select:focus {
     width: 100px;
     
 }
-#items-testimonio p ,h3,h5{
+.items-testimonio > p ,h3,h5{
     text-align: center;
     margin: 0;
     color: rgb(211, 181, 181);

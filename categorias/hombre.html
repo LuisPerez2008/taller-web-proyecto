@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="lenguaje">
+    <link rel="stylesheet" href="../css/carro.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style2.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <title>Categoria-hombre</title>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/categoria.js"></script>
+    <script src="https://account.snatchbot.me/script.js"></script><script>window.sntchChat.Init(364822)</script>
+    <title>Categoria</title>
    
 </head>
 <body>
@@ -25,11 +30,64 @@
                 
             </div>
             <div class="logo-centro">
-                <a href="../index.html"><img src="../img/logo/iconno.ico" alt=""></a>
+                <a href="index.html"><img src="../img/logo/iconno.ico" alt=""></a>
             </div>
             <div class="logo-derecho">
-                <a href=""><i class="bi bi-person-fill"></i></a>
-                <a href=""><i class="bi bi-cart-fill"></i></a>
+                <a href="loginVans.php"><i class="bi bi-person-fill"></i></a> 
+                <div class="container-icon">
+					<div class="container-cart-icon">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="icon-cart"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+							/>
+						</svg>
+						<div class="count-products">
+							<span id="contador-productos">0</span>
+						</div>
+					</div>
+	
+					<div class="container-cart-products hidden-cart">
+						<div class="row-product hidden">
+							<div class="cart-product">
+								<!-- <div class="info-cart-product">
+									<span class="cantidad-producto-carrito">1</span>
+									<p class="titulo-producto-carrito">Zapatos Nike</p>
+									<span class="precio-producto-carrito">$80</span>
+								</div>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									class="icon-close"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M6 18L18 6M6 6l12 12"
+									/>
+								</svg> -->
+							</div> 
+						</div>
+	
+						<div class="cart-total hidden">
+							<h3>Total:</h3>
+							<span class="total-pagar">$0</span>
+						</div>
+						<p class="cart-empty"><!-- El carrito está vacío< --></p>
+						<div class="boton-de-compra"><button  id="btn-comp">Comprar</button></div>
+					</div>
+				</div>
                 <button class="boton-circular" onclick="cambiarFondo()"></button>
                 <button class="boton-circular2" onclick="cambiarFondo2()"></button> 
             </div>
@@ -38,7 +96,7 @@
         <nav class="menu">
             <ul>
                 <a href="../index.html" class="link-menu" id="inicio"><li>Inicio </li> </a>
-                <a href="../categoria.html" class="link-menu" id="categoria"><li> Categoria </li></a>
+                <a href="../categoria.php" class="link-menu" id="categoria"><li> Categoria </li></a>
                 <a href="../blog.html" class="link-menu"><li>Blog</li></a>
                 <a href="../contacto.html" class="link-menu"><li>Contáctanos</li></a>
             </ul>
@@ -64,7 +122,7 @@
                 <img src="../img/zapatillas/vans-h/01.jpg" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Vans Slip-On</h2>
-                    <p>Zapatillas sin cordones, cómodas y versátiles.</p>
+                    <span>Zapatillas sin cordones, cómodas y versátiles.</span>
                     <p class="price">$80.00</p>
                     <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
@@ -73,7 +131,7 @@
                 <img src="../img/zapatillas/vans-h/02.jpg" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Vans Authentic Platform</h2>
-                    <p> Zapatillas Authentic con plataforma, para una altura extra.</p>
+                    <span> Zapatillas Authentic con plataforma, para una altura extra.</span>
                     <p class="price">$70.00</p>
                     <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
@@ -82,7 +140,7 @@
                 <img src="../img/zapatillas/vans-h/03.jpg" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Vans Authentic Pro</h2>
-                    <p>Zapatillas Authentic diseñadas para el skate, con refuerzos en la punta y el talón.</p>
+                    <span>Zapatillas Authentic diseñadas para el skate, con refuerzos en la punta y el talón.</span>
                     <p class="price">$159.99</p>
                     <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
@@ -91,7 +149,7 @@
                 <img src="../img/zapatillas/vans-h/04.jpg" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Vans Slip-On</h2>
-                    <p>Zapatillas sin cordones, cómodas y versátiles.</p>
+                    <span>Zapatillas sin cordones, cómodas y versátiles.</span>
                     <p class="price">$80.00</p>
                     <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
@@ -100,7 +158,7 @@
                 <img src="../img/zapatillas/vans-h/05.jpg" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Vans Authentic Platform</h2>
-                    <p> Zapatillas Authentic con plataforma, para una altura extra.</p>
+                    <span> Zapatillas Authentic con plataforma, para una altura extra.</span>
                     <p class="price">$70.00</p>
                     <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
@@ -109,7 +167,7 @@
                 <img src="../img/zapatillas/vans-h/06.jpg" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Vans Sk8-Hi Platform</h2>
-                    <p>Zapatillas Sk8-Hi con plataforma, para una altura extra.</p>
+                    <span>Zapatillas Sk8-Hi con plataforma, para una altura extra.</span>
                     <p class="price">$70.99</p>
                     <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
@@ -118,7 +176,7 @@
                 <img src="../img/zapatillas/vans-h/07.jpg" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Vans Authentic Pro</h2>
-                    <p>Zapatillas Authentic diseñadas para el skate, con refuerzos en la punta y el talón.</p>
+                    <span>Zapatillas Authentic diseñadas para el skate, con refuerzos en la punta y el talón.</span>
                     <p class="price">$159.99</p>
                     <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
@@ -127,7 +185,7 @@
                 <img src="../img/zapatillas/vans-h/08.jpg" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Vans Slip-On</h2>
-                    <p>Zapatillas sin cordones, cómodas y versátiles.</p>
+                    <span>Zapatillas sin cordones, cómodas y versátiles.</span>
                     <p class="price">$80.00</p>
                     <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
@@ -136,7 +194,7 @@
                 <img src="../img/zapatillas/vans-h/09.jpg" alt="Nombre del Producto">
                 <div class="info-card">
                     <h2>Vans Sk8-Hi Platform</h2>
-                    <p>Zapatillas Sk8-Hi con plataforma, para una altura extra.</p>
+                    <span>Zapatillas Sk8-Hi con plataforma, para una altura extra.</span>
                     <p class="price">$70.99</p>
                     <button class="agregar" id="agregar-carrito">Agregar al carrito</button>
                 </div>
@@ -190,6 +248,187 @@
         </nav>
 
     </footer>
-    <script src="../js/script.js"></script>
+    <script>
+
+        // EVENTO CAMBIAR DE CATEGORIA
+        var select = document.getElementById("elegir-cate");
+    
+        // Evento change para redireccionar y seleccionar la opción adecuada
+        select.addEventListener("change", function () {
+            var seleccion = this.value;
+            if (seleccion === "hombre") {
+                window.location.href = "../categorias/hombre.html";
+            } else if (seleccion === "mujer") {
+                window.location.href = "../categorias/mujer.html";
+            } else if (seleccion === "todos"){
+                window.location.href = "../categoria.php";
+                
+            }
+        });
+    
+        // Obtener la página actual
+        var currentPage = window.location.pathname;
+    
+        // Establecer la opción seleccionada basada en la página actual
+        if (currentPage.endsWith("hombre.html")) {
+            select.value = "hombre";
+        } else if (currentPage.endsWith("mujer.html")) {
+            select.value = "mujer";
+        } else if (currentPage.endsWith("categoria.php")){
+            select.value = "todos";
+        }
+    
+        // PARA CARRITO 
+    const btnCart = document.querySelector('.container-cart-icon')
+    const containerCartProducts = document.querySelector('.container-cart-products')
+    
+    btnCart.addEventListener('click', () => {
+        containerCartProducts.classList.toggle('hidden-cart')
+    })
+    
+    const cartInfo = document.querySelector('.cart-product');
+    const rowProduct = document.querySelector('.row-product');
+    
+    // Lista de todos los contenedores de productos
+    const productsList = document.querySelector('.main');
+    
+    // Variable de arreglos de Productos
+    let allProducts = [];
+    
+    const valorTotal = document.querySelector('.total-pagar');
+    
+    const countProducts = document.querySelector('#contador-productos');
+    
+    const cartEmpty = document.querySelector('.cart-empty');
+    const cartTotal = document.querySelector('.cart-total');
+    
+    productsList.addEventListener('click', e => {
+        Swal.fire({
+                title: "¡agregado al carrito!",
+                icon: "success"
+                });
+        if (e.target.classList.contains('agregar')) {
+    
+    
+    
+            const product = e.target.parentElement;
+    
+            const infoProduct = {
+                quantity: 1,
+                title: product.querySelector('h2').textContent,
+                price: product.querySelector('p').textContent,
+            };
+    
+            const exits = allProducts.some(
+                product => product.title === infoProduct.title
+            );
+    
+            if (exits) {
+                const products = allProducts.map(product => {
+                    if (product.title === infoProduct.title) {
+                        product.quantity++;
+                        return product;
+                    } else {
+                        return product;
+                    }
+                });
+                allProducts = [...products];
+            } else {
+                allProducts = [...allProducts, infoProduct];
+            }
+            
+    
+    
+            showHTML();
+        }
+    });
+    
+    rowProduct.addEventListener('click', e => {
+        if (e.target.classList.contains('icon-close')) {
+            const product = e.target.parentElement;
+            const title = product.querySelector('p').textContent;
+    
+            allProducts = allProducts.filter(
+                product => product.title !== title
+            );
+    
+            console.log(allProducts);
+    
+            showHTML();
+        }
+    });
+    
+    // Funcion para mostrar  HTML
+    const showHTML = () => {
+        if (!allProducts.length) {
+            cartEmpty.classList.remove('hidden');
+            rowProduct.classList.add('hidden');
+            cartTotal.classList.add('hidden');
+        } else {
+            
+            cartEmpty.classList.add('hidden');
+            rowProduct.classList.remove('hidden');
+            cartTotal.classList.remove('hidden');
+        }
+    
+        // Limpiar HTML
+        rowProduct.innerHTML = '';
+    
+        let total = 0;
+        let totalOfProducts = 0;
+    
+        allProducts.forEach(product => {
+            const containerProduct = document.createElement('div');
+            containerProduct.classList.add('cart-product');
+    
+            containerProduct.innerHTML = `
+                <div class="info-cart-product">
+                    <span class="cantidad-producto-carrito">${product.quantity}</span>
+                    <p class="titulo-producto-carrito">${product.title}</p>
+                    <span class="precio-producto-carrito">${product.price}</span>
+                </div>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon-close"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18L18 6M6 6l12 12"
+                    />
+                </svg>
+            `;
+    
+            rowProduct.append(containerProduct);
+    
+            total =
+                total + parseInt(product.quantity * product.price.slice(1));
+            totalOfProducts = totalOfProducts + product.quantity;
+        });
+    
+        valorTotal.innerText = `$${total}`;
+        countProducts.innerText = totalOfProducts;
+    
+    
+        
+    };
+    
+    const myButton = document.getElementById('btn-comp');
+    
+      // Agregar evento de clic al botón
+      myButton.addEventListener('click', () => {
+        Swal.fire({
+          title: "¡Gracias por tu compra!",
+          text: "¡Disfrute su compra!",
+          icon: "success"
+        });
+        
+      });
+    
+    </script>
 </body>
 </html>
